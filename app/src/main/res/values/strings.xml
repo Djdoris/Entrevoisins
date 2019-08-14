@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Entrevoisins</string>
+    <string name="tab_neighbour_title">My neighbours</string>
+    <string name="tab_favorites_title">Favorites</string>
+    <string name="FACEBOOK_ICONE_DESCRIPTION">Logo Facebook</string>
+    <string name="MAP_ICONE_DESCRIPTION">Icone de carte</string>
+    <string name="PHONE_ICONE_DESCRIPTION">Icone de telephone</string>
+    <string name="AProposDeMoi">A Propos de Moi</string>
+    <string name="User_Image_Description">Image du voisin concerne</string>
+    <string name="nom">Nom</string>
+
+</resources>

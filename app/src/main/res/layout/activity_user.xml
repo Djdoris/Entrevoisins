@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bbbbbb"
+    android:id="@+id/details">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="145dp"
+        android:contentDescription="@string/User_Image_Description">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/neighbours_avatar"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/image_button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="?attr/homeAsUpIndicator"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nom"
+            android:textColor="@android:color/white"
+            android:textSize="@android:dimen/app_icon_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/changeFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFEB3B"
+        android:src="@drawable/ic_star_white_24dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/Contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="#eeeeee"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+                <TextView
+                    android:id="@+id/UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/MapIcone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#65E91E63"
+                    android:contentDescription="@string/MAP_ICONE_DESCRIPTION"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/UserName"
+                    app:srcCompat="@android:drawable/ic_menu_mylocation"
+                    android:layout_margin="2dp" />
+
+
+                <TextView
+                    android:id="@+id/UserLocalisation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/MapIcone"
+                    app:layout_constraintTop_toTopOf="@+id/MapIcone"
+                    app:layout_constraintBottom_toBottomOf="@+id/MapIcone"
+                    android:paddingLeft="5dp"/>
+
+                <ImageView
+                    android:id="@+id/PhoneIcone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#65E91E63"
+                    android:contentDescription="@string/PHONE_ICONE_DESCRIPTION"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MapIcone"
+                    app:srcCompat="@android:drawable/ic_menu_call"
+                    android:layout_margin="2dp"/>
+
+                <TextView
+                    android:id="@+id/UserPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/PhoneIcone"
+                    app:layout_constraintTop_toTopOf="@+id/PhoneIcone"
+                    app:layout_constraintBottom_toBottomOf="@+id/PhoneIcone"
+                    android:paddingLeft="5dp"/>
+
+
+                <ImageView
+                    android:id="@+id/FacebookIcone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="#65E91E63"
+                    android:contentDescription="@string/FACEBOOK_ICONE_DESCRIPTION"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PhoneIcone"
+                    app:srcCompat="@android:drawable/ic_menu_search"
+                    android:layout_margin="2dp"/>
+
+                <TextView
+                    android:id="@+id/UserFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@+id/FacebookIcone"
+                    app:layout_constraintTop_toTopOf="@+id/FacebookIcone"
+                    app:layout_constraintBottom_toBottomOf="@+id/FacebookIcone"
+                    android:paddingLeft="5dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/Addons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="#eeeeee"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:elevation="2dp"
+                app:layout_constraintTop_toBottomOf="@id/Contacts">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AProposDeMoi"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
